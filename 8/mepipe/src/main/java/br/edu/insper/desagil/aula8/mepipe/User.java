@@ -30,11 +30,11 @@ public class User {
 	}
 
 	public void addVideo(String id, String title) {
-		videos.add(new Video(id, title));
+		videos.add(new Video(id, title, null));
 	}
 
 	public void addMonetizedVideo(String id, String title, Map<Integer, String> ads) {
-		videos.add(new MonetizedVideo(id, title, ads));
+		videos.add(new Video(id, title, ads));
 	}
 
 	public int totalOfLikes() {
@@ -54,17 +54,29 @@ public class User {
 	}
 
 	public double percentageOfLikes() {
-		int l = totalOfLikes();
+		int l = 0;
+		for (Video video : videos) {
+			l += video.getLikes().size();
+		}
 
-		int d = totalOfDislikes();
+		int d = 0;
+		for (Video video : videos) {
+			d += video.getDislikes().size();
+		}
 
 		return (double) l / (l + d);
 	}
 
 	public double percentageOfDislikes() {
-		int l = totalOfLikes();
+		int l = 0;
+		for (Video video : videos) {
+			l += video.getLikes().size();
+		}
 
-		int d = totalOfDislikes();
+		int d = 0;
+		for (Video video : videos) {
+			d += video.getDislikes().size();
+		}
 
 		return (double) d / (l + d);
 	}
