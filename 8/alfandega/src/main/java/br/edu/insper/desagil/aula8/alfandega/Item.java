@@ -3,31 +3,23 @@ package br.edu.insper.desagil.aula8.alfandega;
 public class Item {
 	private String nome;
 	private double valor;
-	private double rate;
+	private double tarifa;
 
-	public Item(String nome, double valor, double rate) {
+	public Item(String nome, double valor, double tarifa) {
 		this.nome = nome;
 		this.valor = valor;
-		this.rate = rate;
+		this.tarifa = tarifa;
 	}
 
 	public String getNome() {
-		return this.nome;
+		return nome;
 	}
 
 	public double getValor() {
-		return this.valor;
+		return valor;
 	}
 
-	public double getRate() {
-		return this.rate;
-	}
-
-	public double getRatedValor() {
-		return rate * valor;
-	}
-
-	public double getTaxedValor() {
-		return getRatedValor() * 0.01;
+	public double getTarifa() {
+		return tarifa;
 	}
 }
