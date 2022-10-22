@@ -10,13 +10,13 @@ public class Backend {
 		Firebase firebase = manager.getFromCredentials("main.json");
 		firebase.connect();
 
-		/* Não altere nada acima desta linha. */
+		/* NÃO MODIFIQUE NADA ACIMA DESTA LINHA. */
 
 		//
 		// Escreva seu código aqui.
 		//
 
-		/* Não altere nada abaixo desta linha. */
+		/* NÃO MODIFIQUE NADA ABAIXO DESTA LINHA. */
 
 		firebase.disconnect();
 		firebase.delete();
