@@ -17,7 +17,7 @@
     <dependency>
       <groupId>io.github.hashiprobr</groupId>
       <artifactId>nfp-rest</artifactId>
-      <version>3.6.3</version>
+      <version>3.7.3</version>
     </dependency>
   </dependencies>
 </project>
