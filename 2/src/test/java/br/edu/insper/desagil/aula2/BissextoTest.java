@@ -15,6 +15,41 @@ class BissextoTest {
 	}
 
 	@Test
+	void devolveFalseSeRecebe1900() {
+		assertFalse(b.decide(1900));
+	}
+
+	@Test
+	void devolveFalseSeRecebe1919() {
+		assertFalse(b.decide(1919));
+	}
+
+	@Test
+	void devolveTrueSeRecebe1920() {
+		assertTrue(b.decide(1920));
+	}
+
+	@Test
+	void devolveFalseSeRecebe1921() {
+		assertFalse(b.decide(1921));
+	}
+
+	@Test
+	void devolveFalseSeRecebe1922() {
+		assertFalse(b.decide(1922));
+	}
+
+	@Test
+	void devolveFalseSeRecebe1923() {
+		assertFalse(b.decide(1923));
+	}
+
+	@Test
+	void devolveTrueSeRecebe1924() {
+		assertTrue(b.decide(1924));
+	}
+
+	@Test
 	void devolveTrueSeRecebe2000() {
 		assertTrue(b.decide(2000));
 	}
@@ -117,5 +152,25 @@ class BissextoTest {
 	@Test
 	void devolveTrueSeRecebe2020() {
 		assertTrue(b.decide(2020));
+	}
+
+	@Test
+	void devolveFalseSeRecebe2021() {
+		assertFalse(b.decide(2021));
+	}
+
+	@Test
+	void devolveFalseSeRecebe2022() {
+		assertFalse(b.decide(2022));
+	}
+
+	@Test
+	void devolveFalseSeRecebe2023() {
+		assertFalse(b.decide(2023));
+	}
+
+	@Test
+	void devolveFalseSeRecebe2100() {
+		assertFalse(b.decide(2100));
 	}
 }
