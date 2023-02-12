@@ -16,7 +16,7 @@ class NomesTest {
 	private Map<String, List<String>> nomes;
 
 	@BeforeEach
-	private void setUp() {
+	void setUp() {
 		n = new Nomes();
 		sobrenomes = new HashMap<>();
 		nomes = new HashMap<>();

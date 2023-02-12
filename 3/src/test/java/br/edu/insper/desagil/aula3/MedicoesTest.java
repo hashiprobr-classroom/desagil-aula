@@ -15,15 +15,8 @@ class MedicoesTest {
 	private Map<Integer, Double> actual;
 	private Map<Integer, Double> expected;
 
-	private void compare(Map<Integer, Double> expected, Map<Integer, Double> actual) {
-		assertEquals(expected.size(), expected.size());
-		for (int chave : expected.keySet()) {
-			assertEquals(expected.get(chave), actual.get(chave), DELTA);
-		}
-	}
-
 	@BeforeEach
-	private void setUp() {
+	void setUp() {
 		m = new Medicoes();
 		actual = new HashMap<>();
 		expected = new HashMap<>();
@@ -38,7 +31,7 @@ class MedicoesTest {
 		expected.put(1, 0.333333);
 		expected.put(2, 0.333333);
 		expected.put(3, 0.333333);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
@@ -50,7 +43,7 @@ class MedicoesTest {
 		expected.put(1, 0.25);
 		expected.put(2, 0.25);
 		expected.put(3, 0.5);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
@@ -62,7 +55,7 @@ class MedicoesTest {
 		expected.put(1, 0.142857);
 		expected.put(2, 0.142857);
 		expected.put(3, 0.714285);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
@@ -74,7 +67,7 @@ class MedicoesTest {
 		expected.put(1, 0.2);
 		expected.put(2, 0.4);
 		expected.put(3, 0.4);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
@@ -86,7 +79,7 @@ class MedicoesTest {
 		expected.put(1, 0.125);
 		expected.put(2, 0.25);
 		expected.put(3, 0.625);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
@@ -98,11 +91,11 @@ class MedicoesTest {
 		expected.put(1, 0.333333);
 		expected.put(2, 0.333333);
 		expected.put(3, 0.333333);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
-	void DoisDoisCinco() {
+	void doisDoisCinco() {
 		actual.put(1, 2.0);
 		actual.put(2, 2.0);
 		actual.put(3, 5.0);
@@ -110,11 +103,11 @@ class MedicoesTest {
 		expected.put(1, 0.222222);
 		expected.put(2, 0.222222);
 		expected.put(3, 0.555555);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
-	void DoisCincoCinco() {
+	void doisCincoCinco() {
 		actual.put(1, 2.0);
 		actual.put(2, 5.0);
 		actual.put(3, 5.0);
@@ -122,7 +115,7 @@ class MedicoesTest {
 		expected.put(1, 0.166666);
 		expected.put(2, 0.416666);
 		expected.put(3, 0.416666);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
 	}
 
 	@Test
@@ -134,6 +127,13 @@ class MedicoesTest {
 		expected.put(1, 0.333333);
 		expected.put(2, 0.333333);
 		expected.put(3, 0.333333);
-		compare(expected, actual);
+		assertMapEquals(expected, actual);
+	}
+
+	private void assertMapEquals(Map<Integer, Double> expected, Map<Integer, Double> actual) {
+		assertEquals(expected.size(), expected.size());
+		for (int chave : expected.keySet()) {
+			assertEquals(expected.get(chave), actual.get(chave), DELTA);
+		}
 	}
 }

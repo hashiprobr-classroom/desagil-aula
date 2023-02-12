@@ -15,7 +15,7 @@ class FichasTest {
 	private List<Map<String, String>> modificados;
 
 	@BeforeEach
-	private void setUp() {
+	void setUp() {
 		f = new Fichas();
 		originais = new ArrayList<>();
 		modificados = new ArrayList<>();

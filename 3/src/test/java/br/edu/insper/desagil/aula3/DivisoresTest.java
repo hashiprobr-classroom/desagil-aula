@@ -2,7 +2,6 @@ package br.edu.insper.desagil.aula3;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -13,61 +12,61 @@ class DivisoresTest {
 	private List<Integer> divisores;
 
 	@BeforeEach
-	private void setUp() {
+	void setUp() {
 		d = new Divisores();
 	}
 
 	@Test
 	void um() {
-		divisores = Arrays.asList(1);
-		assertEquals(divisores, d.calcula(1));
+		divisores = List.of(1);
+		assertEquals(divisores, d.extrai(1));
 	}
 
 	@Test
 	void dois() {
-		divisores = Arrays.asList(1, 2);
-		assertEquals(divisores, d.calcula(2));
+		divisores = List.of(1, 2);
+		assertEquals(divisores, d.extrai(2));
 	}
 
 	@Test
 	void tres() {
-		divisores = Arrays.asList(1, 3);
-		assertEquals(divisores, d.calcula(3));
+		divisores = List.of(1, 3);
+		assertEquals(divisores, d.extrai(3));
 	}
 
 	@Test
 	void quatro() {
-		divisores = Arrays.asList(1, 2, 4);
-		assertEquals(divisores, d.calcula(4));
+		divisores = List.of(1, 2, 4);
+		assertEquals(divisores, d.extrai(4));
 	}
 
 	@Test
 	void cinco() {
-		divisores = Arrays.asList(1, 5);
-		assertEquals(divisores, d.calcula(5));
+		divisores = List.of(1, 5);
+		assertEquals(divisores, d.extrai(5));
 	}
 
 	@Test
 	void seis() {
-		divisores = Arrays.asList(1, 2, 3, 6);
-		assertEquals(divisores, d.calcula(6));
+		divisores = List.of(1, 2, 3, 6);
+		assertEquals(divisores, d.extrai(6));
 	}
 
 	@Test
 	void sete() {
-		divisores = Arrays.asList(1, 7);
-		assertEquals(divisores, d.calcula(7));
+		divisores = List.of(1, 7);
+		assertEquals(divisores, d.extrai(7));
 	}
 
 	@Test
 	void oito() {
-		divisores = Arrays.asList(1, 2, 4, 8);
-		assertEquals(divisores, d.calcula(8));
+		divisores = List.of(1, 2, 4, 8);
+		assertEquals(divisores, d.extrai(8));
 	}
 
 	@Test
 	void nove() {
-		divisores = Arrays.asList(1, 3, 9);
-		assertEquals(divisores, d.calcula(9));
+		divisores = List.of(1, 3, 9);
+		assertEquals(divisores, d.extrai(9));
 	}
 }

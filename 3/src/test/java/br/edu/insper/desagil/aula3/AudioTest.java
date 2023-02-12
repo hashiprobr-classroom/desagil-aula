@@ -8,18 +8,18 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class SomTest {
-	private Som s;
+class AudioTest {
+	private Audio s;
 	private List<Integer> actual;
 	private List<Integer> expected;
 
 	@BeforeEach
-	private void setUp() {
-		s = new Som();
+	void setUp() {
+		s = new Audio();
 	}
 
 	@Test
-	void MenosUmDoisMenosTresComUm() {
+	void menosUmDoisMenosTresComUm() {
 		actual = Arrays.asList(-1, 2, -3);
 		s.clip(actual, 1);
 		expected = Arrays.asList(-1, 1, -1);
@@ -27,7 +27,7 @@ class SomTest {
 	}
 
 	@Test
-	void TresMenosDoisUmComUm() {
+	void tresMenosDoisUmComUm() {
 		actual = Arrays.asList(3, -2, 1);
 		s.clip(actual, 1);
 		expected = Arrays.asList(1, -1, 1);
@@ -35,7 +35,7 @@ class SomTest {
 	}
 
 	@Test
-	void MenosUmDoisMenosTresComZero() {
+	void menosUmDoisMenosTresComZero() {
 		actual = Arrays.asList(-1, 2, -3);
 		s.clip(actual, 0);
 		expected = Arrays.asList(0, 0, 0);
@@ -43,7 +43,7 @@ class SomTest {
 	}
 
 	@Test
-	void TresMenosDoisUmComZero() {
+	void tresMenosDoisUmComZero() {
 		actual = Arrays.asList(3, -2, 1);
 		s.clip(actual, 0);
 		expected = Arrays.asList(0, 0, 0);
@@ -51,7 +51,7 @@ class SomTest {
 	}
 
 	@Test
-	void MenosUmDoisMenosTresComDois() {
+	void menosUmDoisMenosTresComDois() {
 		actual = Arrays.asList(-1, 2, -3);
 		s.clip(actual, 2);
 		expected = Arrays.asList(-1, 2, -2);
@@ -59,7 +59,7 @@ class SomTest {
 	}
 
 	@Test
-	void TresMenosDoisUmComDois() {
+	void tresMenosDoisUmComDois() {
 		actual = Arrays.asList(3, -2, 1);
 		s.clip(actual, 2);
 		expected = Arrays.asList(2, -2, 1);

@@ -13,7 +13,7 @@ class FrequenciaTest {
 	private Map<Character, Integer> frequencia;
 
 	@BeforeEach
-	private void setUp() {
+	void setUp() {
 		f = new Frequencia();
 		frequencia = new HashMap<>();
 	}
@@ -23,7 +23,7 @@ class FrequenciaTest {
 		frequencia.put('b', 1);
 		frequencia.put('a', 3);
 		frequencia.put('n', 2);
-		assertEquals(frequencia, f.calcula("banana"));
+		assertEquals(frequencia, f.conta("banana"));
 	}
 
 	@Test
@@ -32,7 +32,7 @@ class FrequenciaTest {
 		frequencia.put('b', 2);
 		frequencia.put('o', 2);
 		frequencia.put('r', 1);
-		assertEquals(frequencia, f.calcula("abobora"));
+		assertEquals(frequencia, f.conta("abobora"));
 	}
 
 	@Test
@@ -43,6 +43,6 @@ class FrequenciaTest {
 		frequencia.put('p', 1);
 		frequencia.put('e', 1);
 		frequencia.put('r', 1);
-		assertEquals(frequencia, f.calcula("insper"));
+		assertEquals(frequencia, f.conta("insper"));
 	}
 }

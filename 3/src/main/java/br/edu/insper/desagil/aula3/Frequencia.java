@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class Frequencia {
 
-	public Map<Character, Integer> calcula(String s) {
+	public Map<Character, Integer> conta(String s) {
 		return null;
 	}
 

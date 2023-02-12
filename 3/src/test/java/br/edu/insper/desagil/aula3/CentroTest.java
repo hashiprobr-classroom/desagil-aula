@@ -15,7 +15,7 @@ class CentroTest {
 	private Map<String, Double> notas;
 
 	@BeforeEach
-	private void setUp() {
+	void setUp() {
 		c = new Centro();
 		notas = new HashMap<>();
 	}
