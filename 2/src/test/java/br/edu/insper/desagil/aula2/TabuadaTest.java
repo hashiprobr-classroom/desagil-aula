@@ -15,26 +15,46 @@ class TabuadaTest {
 
 	@Test
 	void constroiPara1() {
-		assertEquals(String.join("", "1 \n"), t.constroi(1));
+		assertEquals(String.join("\n",
+				"1 ",
+				""), t.constroi(1));
 	}
 
 	@Test
 	void constroiPara2() {
-		assertEquals(String.join("", "1 2 \n", "2 4 \n"), t.constroi(2));
+		assertEquals(String.join("\n",
+				"1 2 ",
+				"2 4 ",
+				""), t.constroi(2));
 	}
 
 	@Test
 	void constroiPara3() {
-		assertEquals(String.join("", "1 2 3 \n", "2 4 6 \n", "3 6 9 \n"), t.constroi(3));
+		assertEquals(String.join("\n",
+				"1 2 3 ",
+				"2 4 6 ",
+				"3 6 9 ",
+				""), t.constroi(3));
 	}
 
 	@Test
 	void constroiPara4() {
-		assertEquals(String.join("", "1 2 3 4 \n", "2 4 6 8 \n", "3 6 9 12 \n", "4 8 12 16 \n"), t.constroi(4));
+		assertEquals(String.join("\n",
+				"1 2 3 4 ",
+				"2 4 6 8 ",
+				"3 6 9 12 ",
+				"4 8 12 16 ",
+				""), t.constroi(4));
 	}
 
 	@Test
 	void constroiPara5() {
-		assertEquals(String.join("", "1 2 3 4 5 \n", "2 4 6 8 10 \n", "3 6 9 12 15 \n", "4 8 12 16 20 \n", "5 10 15 20 25 \n"), t.constroi(5));
+		assertEquals(String.join("\n",
+				"1 2 3 4 5 ",
+				"2 4 6 8 10 ",
+				"3 6 9 12 15 ",
+				"4 8 12 16 20 ",
+				"5 10 15 20 25 ",
+				""), t.constroi(5));
 	}
 }
