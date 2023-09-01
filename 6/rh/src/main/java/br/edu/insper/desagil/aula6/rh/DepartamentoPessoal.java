@@ -3,10 +3,10 @@ package br.edu.insper.desagil.aula6.rh;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RH {
+public class DepartamentoPessoal {
 	private List<Funcionario> folha;
 
-	public RH() {
+	public DepartamentoPessoal() {
 		this.folha = new ArrayList<>();
 	}
 
