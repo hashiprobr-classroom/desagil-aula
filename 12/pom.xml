@@ -11,7 +11,7 @@
     <dependency>
       <groupId>io.github.hashiprobr</groupId>
       <artifactId>sdx-dao</artifactId>
-      <version>[0.4.12, 0.99]</version>
+      <version>[0.4.14, 0.99]</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
