@@ -1,6 +1,5 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { Text, TouchableRipple } from 'react-native-paper';
 
@@ -59,10 +58,8 @@ export default function Lista(props) {
     ];
 
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView style={styles.scroll}>
-                {map(gatos, (gato) => <Item nome={gato.nome} />)}
-            </ScrollView>
-        </SafeAreaView>
+        <ScrollView style={styles.container}>
+            {map(gatos, (gato) => <Item nome={gato.nome} />)}
+        </ScrollView>
     );
 }

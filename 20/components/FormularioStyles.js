@@ -2,9 +2,6 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     container: {
-        flexGrow: 1,
-    },
-    scroll: {
         height: 0, /* Gambiarra necessária para funcionar no navegador. */
         flexGrow: 1,
         paddingTop: 10,

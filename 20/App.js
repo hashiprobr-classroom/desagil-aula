@@ -6,7 +6,7 @@ import 'react-native-gesture-handler';
 import merge from 'deepmerge';
 
 import React from 'react';
-import { View } from 'react-native';
+import { LogBox, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { PaperProvider, MD3LightTheme as PaperLightTheme, MD3DarkTheme as PaperDarkTheme, adaptNavigationTheme, Text } from 'react-native-paper';
 import { NavigationContainer, DefaultTheme as NavigationLightTheme, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
@@ -19,6 +19,8 @@ import { DarkContext, useDark } from './extras/dark';
 import { withGlobalStates } from './extras/global';
 
 import Index from './components/Index';
+
+LogBox.ignoreAllLogs();
 
 const { LightTheme, DarkTheme } = adaptNavigationTheme({ reactNavigationLight: NavigationLightTheme, reactNavigationDark: NavigationDarkTheme });
 

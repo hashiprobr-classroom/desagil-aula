@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, ScrollView, Image } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, TextInput } from 'react-native-paper';
 import DropDown from 'react-native-paper-dropdown';
 import { DatePickerInput } from 'react-native-paper-dates';
@@ -22,48 +21,46 @@ export default function Formulario(props) {
     navigation.setOptions({ title: 'Gato' });
 
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView style={styles.scroll}>
-                <Image style={styles.foto} source={require('../assets/gato.jpeg')} />
+        <ScrollView style={styles.container}>
+            <Image style={styles.foto} source={require('../assets/gato.jpeg')} />
 
-                <TextInput style={styles.campo} label="Nome" onChangeText={(text) => console.log(text)} />
+            <TextInput style={styles.campo} label="Nome" onChangeText={(text) => console.log(text)} />
 
-                <View style={styles.campo}>
-                    <DropDown
-                        label="Sexo"
-                        visible={false}
-                        showDropDown={() => console.log('showDropDown')}
-                        onDismiss={() => console.log('onDismiss')}
-                        list={sexos}
-                        value="FEMEA"
-                        setValue={(value) => console.log(value)}
-                    />
-                </View>
-
-                <TextInput style={styles.campo} label="Raça" onChangeText={(text) => console.log(text)} />
-                <TextInput style={styles.campo} label="Tipo de pelagem" onChangeText={(text) => console.log(text)} />
-                <TextInput style={styles.campo} label="Cor dos olhos" onChangeText={(text) => console.log(text)} />
-
-                <DatePickerInput
-                    style={styles.campo}
-                    locale="pt"
-                    label="Data de nascimento"
+            <View style={styles.campo}>
+                <DropDown
+                    label="Sexo"
                     visible={false}
-                    value={dataDeNascimento}
-                    onChange={(value) => console.log(value)}
+                    showDropDown={() => console.log('showDropDown')}
+                    onDismiss={() => console.log('onDismiss')}
+                    list={sexos}
+                    value="FEMEA"
+                    setValue={(value) => console.log(value)}
                 />
+            </View>
 
-                <DatePickerInput
-                    style={styles.campo}
-                    locale="pt"
-                    label="Data de resgate"
-                    visible={false}
-                    value={dataDeResgate}
-                    onChange={(value) => console.log(value)}
-                />
+            <TextInput style={styles.campo} label="Raça" onChangeText={(text) => console.log(text)} />
+            <TextInput style={styles.campo} label="Tipo de pelagem" onChangeText={(text) => console.log(text)} />
+            <TextInput style={styles.campo} label="Cor dos olhos" onChangeText={(text) => console.log(text)} />
 
-                <Button style={styles.campo} onPress={() => console.log('onPress')}>Salvar</Button>
-            </ScrollView>
-        </SafeAreaView>
+            <DatePickerInput
+                style={styles.campo}
+                locale="pt"
+                label="Data de nascimento"
+                visible={false}
+                value={dataDeNascimento}
+                onChange={(value) => console.log(value)}
+            />
+
+            <DatePickerInput
+                style={styles.campo}
+                locale="pt"
+                label="Data de resgate"
+                visible={false}
+                value={dataDeResgate}
+                onChange={(value) => console.log(value)}
+            />
+
+            <Button style={styles.campo} onPress={() => console.log('onPress')}>Salvar</Button>
+        </ScrollView>
     );
 }
