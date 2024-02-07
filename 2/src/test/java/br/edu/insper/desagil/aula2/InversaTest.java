@@ -1,95 +1,95 @@
 package br.edu.insper.desagil.aula2;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class InversaTest {
-	private Inversa i;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	@BeforeEach
-	void setUp() {
-		i = new Inversa();
-	}
+public class InversaTest {
+    private Inversa i;
 
-	@Test
-	void vazia() {
-		assertEquals("", i.constroi(""));
-	}
+    @BeforeEach
+    void setUp() {
+        i = new Inversa();
+    }
 
-	@Test
-	void a() {
-		assertEquals("a", i.constroi("a"));
-	}
+    @Test
+    void vazia() {
+        assertEquals("", i.constroi(""));
+    }
 
-	@Test
-	void aa() {
-		assertEquals("aa", i.constroi("aa"));
-	}
+    @Test
+    void a() {
+        assertEquals("a", i.constroi("a"));
+    }
 
-	@Test
-	void ab() {
-		assertEquals("ba", i.constroi("ab"));
-	}
+    @Test
+    void aa() {
+        assertEquals("aa", i.constroi("aa"));
+    }
 
-	@Test
-	void ba() {
-		assertEquals("ab", i.constroi("ba"));
-	}
+    @Test
+    void ab() {
+        assertEquals("ba", i.constroi("ab"));
+    }
 
-	@Test
-	void bb() {
-		assertEquals("bb", i.constroi("bb"));
-	}
+    @Test
+    void ba() {
+        assertEquals("ab", i.constroi("ba"));
+    }
 
-	@Test
-	void aaa() {
-		assertEquals("aaa", i.constroi("aaa"));
-	}
+    @Test
+    void bb() {
+        assertEquals("bb", i.constroi("bb"));
+    }
 
-	@Test
-	void aab() {
-		assertEquals("baa", i.constroi("aab"));
-	}
+    @Test
+    void aaa() {
+        assertEquals("aaa", i.constroi("aaa"));
+    }
 
-	@Test
-	void aba() {
-		assertEquals("aba", i.constroi("aba"));
-	}
+    @Test
+    void aab() {
+        assertEquals("baa", i.constroi("aab"));
+    }
 
-	@Test
-	void baa() {
-		assertEquals("aab", i.constroi("baa"));
-	}
+    @Test
+    void aba() {
+        assertEquals("aba", i.constroi("aba"));
+    }
 
-	@Test
-	void abb() {
-		assertEquals("bba", i.constroi("abb"));
-	}
+    @Test
+    void baa() {
+        assertEquals("aab", i.constroi("baa"));
+    }
 
-	@Test
-	void bab() {
-		assertEquals("bab", i.constroi("bab"));
-	}
+    @Test
+    void abb() {
+        assertEquals("bba", i.constroi("abb"));
+    }
 
-	@Test
-	void bba() {
-		assertEquals("abb", i.constroi("bba"));
-	}
+    @Test
+    void bab() {
+        assertEquals("bab", i.constroi("bab"));
+    }
 
-	@Test
-	void bbb() {
-		assertEquals("bbb", i.constroi("bbb"));
-	}
+    @Test
+    void bba() {
+        assertEquals("abb", i.constroi("bba"));
+    }
 
-	@Test
-	void banana() {
-		assertEquals("ananab", i.constroi("banana"));
-	}
+    @Test
+    void bbb() {
+        assertEquals("bbb", i.constroi("bbb"));
+    }
 
-	@Test
-	void abobora() {
-		assertEquals("aroboba", i.constroi("abobora"));
-	}
+    @Test
+    void banana() {
+        assertEquals("ananab", i.constroi("banana"));
+    }
+
+    @Test
+    void abobora() {
+        assertEquals("aroboba", i.constroi("abobora"));
+    }
 }

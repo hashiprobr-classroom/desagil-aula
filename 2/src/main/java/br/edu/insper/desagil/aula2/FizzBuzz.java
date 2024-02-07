@@ -1,9 +1,7 @@
 package br.edu.insper.desagil.aula2;
 
 public class FizzBuzz {
-
-	public String calcula(int n) {
-		return "";
-	}
-
+    public String calcula(int n) {
+        return "";
+    }
 }
