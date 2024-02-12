@@ -34,6 +34,11 @@ public class PotenciaTest {
     }
 
     @Test
+    void calcula0por4() {
+        assertEquals(0, p.calcula(0, 4));
+    }
+
+    @Test
     void calcula1por0() {
         assertEquals(1, p.calcula(1, 0));
     }
@@ -51,6 +56,11 @@ public class PotenciaTest {
     @Test
     void calcula1por3() {
         assertEquals(1, p.calcula(1, 3));
+    }
+
+    @Test
+    void calcula1por4() {
+        assertEquals(1, p.calcula(1, 4));
     }
 
     @Test
@@ -74,6 +84,11 @@ public class PotenciaTest {
     }
 
     @Test
+    void calcula2por4() {
+        assertEquals(16, p.calcula(2, 4));
+    }
+
+    @Test
     void calcula3por0() {
         assertEquals(1, p.calcula(3, 0));
     }
@@ -91,5 +106,35 @@ public class PotenciaTest {
     @Test
     void calcula3por3() {
         assertEquals(27, p.calcula(3, 3));
+    }
+
+    @Test
+    void calcula3por4() {
+        assertEquals(81, p.calcula(3, 4));
+    }
+
+    @Test
+    void calcula4por0() {
+        assertEquals(1, p.calcula(4, 0));
+    }
+
+    @Test
+    void calcula4por1() {
+        assertEquals(4, p.calcula(4, 1));
+    }
+
+    @Test
+    void calcula4por2() {
+        assertEquals(16, p.calcula(4, 2));
+    }
+
+    @Test
+    void calcula4por3() {
+        assertEquals(64, p.calcula(4, 3));
+    }
+
+    @Test
+    void calcula4por4() {
+        assertEquals(256, p.calcula(4, 4));
     }
 }

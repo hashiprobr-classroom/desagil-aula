@@ -24,6 +24,11 @@ public class InversaTest {
     }
 
     @Test
+    void b() {
+        assertEquals("b", i.constroi("b"));
+    }
+
+    @Test
     void aa() {
         assertEquals("aa", i.constroi("aa"));
     }
