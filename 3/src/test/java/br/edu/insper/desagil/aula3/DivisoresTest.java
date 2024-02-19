@@ -1,72 +1,62 @@
 package br.edu.insper.desagil.aula3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class DivisoresTest {
-	private Divisores d;
-	private List<Integer> divisores;
+import java.util.List;
 
-	@BeforeEach
-	void setUp() {
-		d = new Divisores();
-	}
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	@Test
-	void um() {
-		divisores = List.of(1);
-		assertEquals(divisores, d.extrai(1));
-	}
+public class DivisoresTest {
+    private Divisores d;
 
-	@Test
-	void dois() {
-		divisores = List.of(1, 2);
-		assertEquals(divisores, d.extrai(2));
-	}
+    @BeforeEach
+    void setUp() {
+        d = new Divisores();
+    }
 
-	@Test
-	void tres() {
-		divisores = List.of(1, 3);
-		assertEquals(divisores, d.extrai(3));
-	}
+    @Test
+    void um() {
+        assertEquals(List.of(1), d.extrai(1));
+    }
 
-	@Test
-	void quatro() {
-		divisores = List.of(1, 2, 4);
-		assertEquals(divisores, d.extrai(4));
-	}
+    @Test
+    void dois() {
+        assertEquals(List.of(1, 2), d.extrai(2));
+    }
 
-	@Test
-	void cinco() {
-		divisores = List.of(1, 5);
-		assertEquals(divisores, d.extrai(5));
-	}
+    @Test
+    void tres() {
+        assertEquals(List.of(1, 3), d.extrai(3));
+    }
 
-	@Test
-	void seis() {
-		divisores = List.of(1, 2, 3, 6);
-		assertEquals(divisores, d.extrai(6));
-	}
+    @Test
+    void quatro() {
+        assertEquals(List.of(1, 2, 4), d.extrai(4));
+    }
 
-	@Test
-	void sete() {
-		divisores = List.of(1, 7);
-		assertEquals(divisores, d.extrai(7));
-	}
+    @Test
+    void cinco() {
+        assertEquals(List.of(1, 5), d.extrai(5));
+    }
 
-	@Test
-	void oito() {
-		divisores = List.of(1, 2, 4, 8);
-		assertEquals(divisores, d.extrai(8));
-	}
+    @Test
+    void seis() {
+        assertEquals(List.of(1, 2, 3, 6), d.extrai(6));
+    }
 
-	@Test
-	void nove() {
-		divisores = List.of(1, 3, 9);
-		assertEquals(divisores, d.extrai(9));
-	}
+    @Test
+    void sete() {
+        assertEquals(List.of(1, 7), d.extrai(7));
+    }
+
+    @Test
+    void oito() {
+        assertEquals(List.of(1, 2, 4, 8), d.extrai(8));
+    }
+
+    @Test
+    void nove() {
+        assertEquals(List.of(1, 3, 9), d.extrai(9));
+    }
 }

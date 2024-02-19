@@ -1,66 +1,70 @@
 package br.edu.insper.desagil.aula3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class NomesTest {
-	private Nomes n;
-	private Map<String, List<String>> sobrenomes;
-	private Map<String, List<String>> nomes;
+import java.util.*;
 
-	@BeforeEach
-	void setUp() {
-		n = new Nomes();
-		sobrenomes = new HashMap<>();
-		nomes = new HashMap<>();
-	}
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	@Test
-	void testUmNomeUmSobrenome() {
-		sobrenomes.put("joao", Arrays.asList("silva"));
-		nomes.put("silva", Arrays.asList("joao"));
-		assertEquals(nomes, n.inverte(sobrenomes));
-	}
+public class NomesTest {
+    private Nomes n;
 
-	@Test
-	void testUmNomeDoisSobrenomes() {
-		sobrenomes.put("joao", Arrays.asList("silva", "souza"));
-		nomes.put("silva", Arrays.asList("joao"));
-		nomes.put("souza", Arrays.asList("joao"));
-		assertEquals(nomes, n.inverte(sobrenomes));
-	}
+    @BeforeEach
+    void setUp() {
+        n = new Nomes();
+    }
 
-	@Test
-	void testDoisNomesUmSobrenome() {
-		sobrenomes.put("joao", Arrays.asList("silva"));
-		sobrenomes.put("jose", Arrays.asList("silva"));
-		nomes.put("silva", Arrays.asList("joao", "jose"));
-		assertEquals(nomes, n.inverte(sobrenomes));
-	}
+    @Test
+    void testUmNomeUmSobrenome() {
+        Map<String, List<String>> sobrenomes = Map.of(
+                "joao", List.of("silva"));
+        assertMapEquals(Map.of(
+                "silva", List.of("joao")), n.inverte(sobrenomes));
+    }
 
-	@Test
-	void testDoisNomesDoisSobrenomes() {
-		sobrenomes.put("joao", Arrays.asList("silva", "souza"));
-		sobrenomes.put("jose", Arrays.asList("silva", "souza"));
-		nomes.put("silva", Arrays.asList("joao", "jose"));
-		nomes.put("souza", Arrays.asList("joao", "jose"));
-		assertEquals(nomes, n.inverte(sobrenomes));
-	}
+    @Test
+    void testUmNomeDoisSobrenomes() {
+        Map<String, List<String>> sobrenomes = Map.of(
+                "joao", List.of("silva", "souza"));
+        assertMapEquals(Map.of(
+                "silva", List.of("joao"),
+                "souza", List.of("joao")), n.inverte(sobrenomes));
+    }
 
-	@Test
-	void exemploEnunciado() {
-		sobrenomes.put("joao", Arrays.asList("silva", "souza"));
-		sobrenomes.put("maria", Arrays.asList("silva"));
-		sobrenomes.put("mariana", Arrays.asList("souza"));
-		nomes.put("silva", Arrays.asList("joao", "maria"));
-		nomes.put("souza", Arrays.asList("joao", "mariana"));
-		assertEquals(nomes, n.inverte(sobrenomes));
-	}
+    @Test
+    void testDoisNomesUmSobrenome() {
+        Map<String, List<String>> sobrenomes = Map.of(
+                "joao", List.of("silva"),
+                "jose", List.of("silva"));
+        assertMapEquals(Map.of(
+                "silva", List.of("joao", "jose")), n.inverte(sobrenomes));
+    }
+
+    @Test
+    void testDoisNomesDoisSobrenomes() {
+        Map<String, List<String>> sobrenomes = Map.of(
+                "joao", List.of("silva", "souza"),
+                "jose", List.of("silva", "souza"));
+        assertMapEquals(Map.of(
+                "silva", List.of("joao", "jose"),
+                "souza", List.of("joao", "jose")), n.inverte(sobrenomes));
+    }
+
+    @Test
+    void enunciado() {
+        Map<String, List<String>> sobrenomes = Map.of("joao", List.of("silva", "souza"),
+                "maria", List.of("silva"),
+                "mariana", List.of("souza"));
+        assertMapEquals(Map.of(
+                "silva", List.of("joao", "maria"),
+                "souza", List.of("joao", "mariana")), n.inverte(sobrenomes));
+    }
+
+    private void assertMapEquals(Map<String, List<String>> expected, Map<String, List<String>> actual) {
+        assertEquals(expected.size(), actual.size());
+        for (String key : expected.keySet()) {
+            assertEquals(new HashSet<>(expected.get(key)), new HashSet<>(actual.get(key)));
+        }
+    }
 }

@@ -1,68 +1,60 @@
 package br.edu.insper.desagil.aula3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.Arrays;
-import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class AudioTest {
-	private Audio s;
-	private List<Integer> actual;
-	private List<Integer> expected;
+import java.util.ArrayList;
+import java.util.List;
 
-	@BeforeEach
-	void setUp() {
-		s = new Audio();
-	}
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	@Test
-	void menosUmDoisMenosTresComUm() {
-		actual = Arrays.asList(-1, 2, -3);
-		s.clip(actual, 1);
-		expected = Arrays.asList(-1, 1, -1);
-		assertEquals(expected, actual);
-	}
+public class AudioTest {
+    private Audio s;
 
-	@Test
-	void tresMenosDoisUmComUm() {
-		actual = Arrays.asList(3, -2, 1);
-		s.clip(actual, 1);
-		expected = Arrays.asList(1, -1, 1);
-		assertEquals(expected, actual);
-	}
+    @BeforeEach
+    void setUp() {
+        s = new Audio();
+    }
 
-	@Test
-	void menosUmDoisMenosTresComZero() {
-		actual = Arrays.asList(-1, 2, -3);
-		s.clip(actual, 0);
-		expected = Arrays.asList(0, 0, 0);
-		assertEquals(expected, actual);
-	}
+    @Test
+    void menosUmDoisMenosTresComUm() {
+        List<Integer> onda = new ArrayList<>(List.of(-1, 2, -3));
+        s.clip(onda, 1);
+        assertEquals(List.of(-1, 1, -1), onda);
+    }
 
-	@Test
-	void tresMenosDoisUmComZero() {
-		actual = Arrays.asList(3, -2, 1);
-		s.clip(actual, 0);
-		expected = Arrays.asList(0, 0, 0);
-		assertEquals(expected, actual);
-	}
+    @Test
+    void tresMenosDoisUmComUm() {
+        List<Integer> onda = new ArrayList<>(List.of(3, -2, 1));
+        s.clip(onda, 1);
+        assertEquals(List.of(1, -1, 1), onda);
+    }
 
-	@Test
-	void menosUmDoisMenosTresComDois() {
-		actual = Arrays.asList(-1, 2, -3);
-		s.clip(actual, 2);
-		expected = Arrays.asList(-1, 2, -2);
-		assertEquals(expected, actual);
-	}
+    @Test
+    void menosUmDoisMenosTresComZero() {
+        List<Integer> onda = new ArrayList<>(List.of(-1, 2, -3));
+        s.clip(onda, 0);
+        assertEquals(List.of(0, 0, 0), onda);
+    }
 
-	@Test
-	void tresMenosDoisUmComDois() {
-		actual = Arrays.asList(3, -2, 1);
-		s.clip(actual, 2);
-		expected = Arrays.asList(2, -2, 1);
-		assertEquals(expected, actual);
-	}
+    @Test
+    void tresMenosDoisUmComZero() {
+        List<Integer> onda = new ArrayList<>(List.of(3, -2, 1));
+        s.clip(onda, 0);
+        assertEquals(List.of(0, 0, 0), onda);
+    }
+
+    @Test
+    void menosUmDoisMenosTresComDois() {
+        List<Integer> onda = new ArrayList<>(List.of(-1, 2, -3));
+        s.clip(onda, 2);
+        assertEquals(List.of(-1, 2, -2), onda);
+    }
+
+    @Test
+    void tresMenosDoisUmComDois() {
+        List<Integer> onda = new ArrayList<>(List.of(3, -2, 1));
+        s.clip(onda, 2);
+        assertEquals(List.of(2, -2, 1), onda);
+    }
 }

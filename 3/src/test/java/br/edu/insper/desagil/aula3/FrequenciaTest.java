@@ -1,48 +1,45 @@
 package br.edu.insper.desagil.aula3;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class FrequenciaTest {
-	private Frequencia f;
-	private Map<Character, Integer> frequencia;
+import java.util.Map;
 
-	@BeforeEach
-	void setUp() {
-		f = new Frequencia();
-		frequencia = new HashMap<>();
-	}
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-	@Test
-	void banana() {
-		frequencia.put('b', 1);
-		frequencia.put('a', 3);
-		frequencia.put('n', 2);
-		assertEquals(frequencia, f.conta("banana"));
-	}
+public class FrequenciaTest {
+    private Frequencia f;
 
-	@Test
-	void abobora() {
-		frequencia.put('a', 2);
-		frequencia.put('b', 2);
-		frequencia.put('o', 2);
-		frequencia.put('r', 1);
-		assertEquals(frequencia, f.conta("abobora"));
-	}
+    @BeforeEach
+    void setUp() {
+        f = new Frequencia();
+    }
 
-	@Test
-	void insper() {
-		frequencia.put('i', 1);
-		frequencia.put('n', 1);
-		frequencia.put('s', 1);
-		frequencia.put('p', 1);
-		frequencia.put('e', 1);
-		frequencia.put('r', 1);
-		assertEquals(frequencia, f.conta("insper"));
-	}
+    @Test
+    void banana() {
+        assertEquals(Map.of(
+                'b', 1,
+                'a', 3,
+                'n', 2), f.conta("banana"));
+    }
+
+    @Test
+    void abobora() {
+        assertEquals(Map.of(
+                'a', 2,
+                'b', 2,
+                'o', 2,
+                'r', 1), f.conta("abobora"));
+    }
+
+    @Test
+    void insper() {
+        assertEquals(Map.of(
+                'i', 1,
+                'n', 1,
+                's', 1,
+                'p', 1,
+                'e', 1,
+                'r', 1), f.conta("insper"));
+    }
 }
