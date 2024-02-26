@@ -4,27 +4,27 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Equipe {
-	private String nome;
-	private Map<Integer, Jogador> jogadores;
+    private String nome;
+    private Map<Integer, Jogador> jogadores;
 
-	public Equipe(String nome) {
-		this.nome = nome;
-		this.jogadores = new HashMap<>();
-	}
+    public Equipe(String nome) {
+        this.nome = nome;
+        this.jogadores = new HashMap<>();
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-	public Jogador acessaJogador(int camisa) {
-		return jogadores.get(camisa);
-	}
+    public Jogador acessaJogador(int camisa) {
+        return jogadores.get(camisa);
+    }
 
-	public void adicionaJogador(int camisa, Jogador jogador) {
-		jogadores.put(camisa, jogador);
-	}
+    public void adicionaJogador(int camisa, Jogador jogador) {
+        jogadores.put(camisa, jogador);
+    }
 }
