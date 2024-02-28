@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DepartamentoPessoal {
-	private List<Funcionario> folha;
+    private List<Funcionario> folha;
 
-	public DepartamentoPessoal() {
-		this.folha = new ArrayList<>();
-	}
+    public DepartamentoPessoal() {
+        this.folha = new ArrayList<>();
+    }
 
-	public void contrata(Funcionario funcionario) {
-		folha.add(funcionario);
-	}
+    public void contrata(Funcionario funcionario) {
+        folha.add(funcionario);
+    }
 
-	public double calculaMedia() {
-		if (folha.isEmpty()) {
-			return 0;
-		}
-		double s = 0;
-		for (Funcionario funcionario : folha) {
-			s += funcionario.calculaSalarioTotal();
-		}
-		return s / folha.size();
-	}
+    public double calculaMedia() {
+        if (folha.isEmpty()) {
+            return 0;
+        }
+        double s = 0;
+        for (Funcionario funcionario : folha) {
+            s += funcionario.calculaSalarioTotal();
+        }
+        return s / folha.size();
+    }
 }
