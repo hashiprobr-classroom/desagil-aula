@@ -4,19 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Car {
-	private Pilot pilot;
-	private List<Equipment> equipments;
+    private Pilot pilot;
+    private List<Equipment> equipments;
 
-	public Car(Pilot pilot) {
-		this.pilot = pilot;
-		this.equipments = new ArrayList<>();
-	}
+    public Car(Pilot pilot) {
+        this.pilot = pilot;
+        this.equipments = new ArrayList<>();
+    }
 
-	public Pilot getPilot() {
-		return pilot;
-	}
+    public Pilot getPilot() {
+        return pilot;
+    }
 
-	public void add(Equipment equipment) {
-		equipments.add(equipment);
-	}
+    public List<Equipment> getEquipments() {
+        return equipments;
+    }
+
+    public void add(Equipment equipment) {
+        equipments.add(equipment);
+    }
 }
