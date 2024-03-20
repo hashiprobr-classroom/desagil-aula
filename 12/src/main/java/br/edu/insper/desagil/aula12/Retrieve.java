@@ -3,18 +3,18 @@ package br.edu.insper.desagil.aula12;
 import br.pro.hashi.sdx.dao.DaoClient;
 
 public class Retrieve {
-	public static void main(String[] args) {
-		DaoClient client = DaoClient.fromCredentials("main.json");
-		client.connect();
+    public static void main(String[] args) {
+        DaoClient client = DaoClient.fromCredentials("main.json");
+        client.connect();
 
-		/* NÃO MODIFIQUE NADA ACIMA DESTA LINHA. */
+        /* NÃO MODIFIQUE NADA ACIMA DESTA LINHA. */
 
-		//
-		// Escreva seu código aqui.
-		//
+        //
+        // Escreva seu código aqui.
+        //
 
-		/* NÃO MODIFIQUE NADA ABAIXO DESTA LINHA. */
+        /* NÃO MODIFIQUE NADA ABAIXO DESTA LINHA. */
 
-		client.disconnect();
-	}
+        client.disconnect();
+    }
 }
