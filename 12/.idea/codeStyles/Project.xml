@@ -5,6 +5,7 @@
       <option name="KEEP_SIMPLE_LAMBDAS_IN_ONE_LINE" value="true" />
       <option name="KEEP_SIMPLE_CLASSES_IN_ONE_LINE" value="true" />
       <option name="WRAP_COMMENTS" value="true" />
+      <option name="FIELD_ANNOTATION_WRAP" value="0" />
     </codeStyleSettings>
     <codeStyleSettings language="XML">
       <option name="RIGHT_MARGIN" value="240" />
