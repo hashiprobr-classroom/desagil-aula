@@ -1,0 +1,64 @@
+/* Blocos padrão (para largura de celular). */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+}
+
+.header p {
+    font-weight: bold;
+}
+
+.auth {
+    margin-top: 1.5rem;
+}
+
+.auth a {
+    text-wrap: nowrap;
+}
+
+.signIn {
+    margin-right: 1rem;
+}
+
+.signUp {
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    font-weight: bold;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Blocos específicos para largura de tablet. */
+
+@media (min-width: 500px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .auth {
+        margin-top: 0;
+    }
+ }
+
+/* Blocos específicos para largura de desktop. */
+
+@media (min-width: 800px) {
+}
+
+/* Blocos específicos para dispositivos não-touch. */
+
+@media (hover: hover) and (pointer: fine) {
+}
