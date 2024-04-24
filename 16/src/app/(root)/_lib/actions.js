@@ -14,7 +14,7 @@ async function request(path, options) {
     }
 
     if (message) {
-        return await response.json();
+        return JSON.parse(message);
     }
 
     return null;
