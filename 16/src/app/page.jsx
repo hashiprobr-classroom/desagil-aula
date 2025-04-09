@@ -7,18 +7,13 @@ import insper from '../../public/insper.png';
 
 export default function Home() {
     return (
-        <>
-            <header className={styles.header}>
-                <p>Página definida em app/page.js</p>
-                <div className={styles.auth}>
-                    <Link className={styles.signIn} href="/sign-in">sign in</Link>
-                    <Link className={styles.signUp} href="/sign-up">sign up</Link>
-                </div>
-            </header>
-            <main className={styles.main}>
-                {/* Quando a imagem é local, width e height não são obrigatórios. */}
-                <Image src={insper} alt="Logotipo do Insper" />
-            </main>
-        </>
+        <div className={styles.paragraphs}>
+            {/* Quando a imagem é local, width e height não são obrigatórios. */}
+            <Image src={insper} alt="Logotipo do Insper" />
+
+            <p>Página principal (definida em app/page.js)</p>
+            <p><Link href="/subpagina1">Subpágina 1</Link></p>
+            <p><Link href="/subpagina2">Subpágina 2</Link></p>
+        </div>
     );
 }

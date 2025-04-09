@@ -4,8 +4,8 @@
  */
 
 import { Inter } from 'next/font/google';
-import { ClerkProvider } from '@clerk/nextjs'
 import './globals.css';
+import styles from './layout.module.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,10 +15,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <ClerkProvider>
-            <html lang="pt-br">
-                <body className={inter.className}>{children}</body>
-            </html>
-        </ClerkProvider>
+        <html lang="pt-br">
+            <body className={inter.className}>
+                <header className={styles.header}>
+                    <p>Cabeçalho definido em app/layout.jsx</p>
+                </header>
+                <main className={styles.main}>
+                    {children}
+                </main>
+            </body>
+        </html>
     );
 }
