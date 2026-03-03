@@ -3,7 +3,7 @@ package br.edu.insper.desagil.aula9;
 import javax.swing.*;
 
 public class Terminal {
-    public static void main(String[] args) {
+    void main() {
         javax.swing.SwingUtilities.invokeLater(() -> {
             View view = new View();
 
