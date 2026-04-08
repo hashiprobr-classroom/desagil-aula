@@ -3,7 +3,7 @@ package br.edu.insper.desagil.aula12;
 import br.pro.hashi.sdx.dao.DaoClient;
 
 public class Create {
-    public static void main(String[] args) {
+    void main() {
         DaoClient client = DaoClient.fromCredentials("main.json");
         client.connect();
 
