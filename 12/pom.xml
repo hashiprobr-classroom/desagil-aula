@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.edu.insper</groupId>
-    <artifactId>desagil-aula12</artifactId>
+    <artifactId>desagil-aula11</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -11,13 +11,13 @@
     <dependencies>
         <dependency>
             <groupId>io.github.hashiprobr</groupId>
-            <artifactId>sdx-dao</artifactId>
-            <version>0.5.2</version>
+            <artifactId>sdx-rest-jackson</artifactId>
+            <version>0.9.13-TEMP</version>
         </dependency>
         <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-            <version>4.33.2</version>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>11.0.23</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
