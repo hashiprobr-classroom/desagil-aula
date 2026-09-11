@@ -4,6 +4,7 @@
  */
 
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css';
 import styles from './layout.module.css';
 
@@ -19,6 +20,11 @@ export default function RootLayout({ children }) {
             <body className={inter.className}>
                 <header className={styles.header}>
                     <p>Cabeçalho definido em app/layout.jsx</p>
+                    <nav className={styles.menu}>
+                        <Link href="/">Principal</Link>
+                        <Link href="/adicionar">Adicionar</Link>
+                        <Link href="/todos">Todos</Link>
+                    </nav>
                 </header>
                 <main className={styles.main}>
                     {children}
