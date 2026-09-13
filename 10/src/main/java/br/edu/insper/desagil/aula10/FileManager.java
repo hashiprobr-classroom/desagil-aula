@@ -12,14 +12,14 @@ public class FileManager {
     }
 
     public String load(String path) {
-        System.out.println("Abrindo leitor");
+        IO.println("Abrindo leitor");
         InputStream fileStream = new FileInputStream(path);
-        System.out.println("Leitor aberto");
+        IO.println("Leitor aberto");
 
         Reader fileReader = new InputStreamReader(fileStream, decoder);
         BufferedReader reader = new BufferedReader(fileReader);
 
-        System.out.println("Lendo conteúdo");
+        IO.println("Lendo conteúdo");
         String content = "";
         String line = reader.readLine();
         while (line != null) {
@@ -27,26 +27,26 @@ public class FileManager {
             line = reader.readLine();
         }
         content += "\n";
-        System.out.println("Conteúdo lido");
+        IO.println("Conteúdo lido");
 
-        System.out.println("Fechando leitor");
+        IO.println("Fechando leitor");
         reader.close();
-        System.out.println("Leitor fechado");
+        IO.println("Leitor fechado");
 
         return content;
     }
 
     public void save(String path, String content) {
-        System.out.println("Abrindo escritor");
+        IO.println("Abrindo escritor");
         FileWriter writer = new FileWriter(path);
-        System.out.println("Escritor aberto");
+        IO.println("Escritor aberto");
 
-        System.out.println("Escrevendo conteúdo");
+        IO.println("Escrevendo conteúdo");
         writer.write(content);
-        System.out.println("Conteúdo escrito");
+        IO.println("Conteúdo escrito");
 
-        System.out.println("Fechando escritor");
+        IO.println("Fechando escritor");
         writer.close();
-        System.out.println("Escritor fechado");
+        IO.println("Escritor fechado");
     }
 }
